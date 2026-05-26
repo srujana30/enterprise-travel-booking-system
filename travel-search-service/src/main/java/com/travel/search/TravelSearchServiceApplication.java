@@ -13,13 +13,5 @@ public class TravelSearchServiceApplication {
 		SpringApplication.run(TravelSearchServiceApplication.class, args);
 	}
 
-    @RestController
-    @RequestMapping("/api/travel")
-    public static class TravelController {
-
-        @GetMapping("/health")
-        public String health() {
-            return "Travel Search Service Running";
-        }
-    }
+    
 }
