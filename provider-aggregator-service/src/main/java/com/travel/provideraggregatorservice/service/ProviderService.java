@@ -34,7 +34,7 @@ public class ProviderService {
     public List<HotelResponseProvider> hotelsProviderService(String destination,LocalDateTime travelDate) {
         List<HotelResponseProvider> hotelResponseProviderList = new ArrayList<>();
         if (destination.equalsIgnoreCase("NYC")) {
-            hotelResponseProviderList.add(0, new HotelResponseProvider("H11", "Hilton NYC", destination, 30.0, 4.5, 9));
+            hotelResponseProviderList.add(new HotelResponseProvider("H11", "Hilton NYC", destination, 30.0, 4.5, 9));
             hotelResponseProviderList.add(new HotelResponseProvider("H12", "Hilton Times Square", destination, 200.0, 4, 7));
             hotelResponseProviderList.add(new HotelResponseProvider("H13", "Holiday Inn Manhattan", destination, 150.0, 3, 8));
         } else if (destination.equalsIgnoreCase("DFW")) {
