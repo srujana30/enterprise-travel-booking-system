@@ -1,13 +1,12 @@
 package com.travel.bookingservice.service;
 
-import com.travel.bookingservice.Repository.BookingRepository;
+import com.travel.bookingservice.repository.BookingRepository;
 import com.travel.bookingservice.dto.BookingRequest;
 import com.travel.bookingservice.dto.BookingResponse;
 import com.travel.bookingservice.dto.CancelBookingResponse;
 import com.travel.bookingservice.model.Booking;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
