@@ -10,6 +10,9 @@
 
     <modules>
         <module>travel-search-service</module>
+        <module>provider-aggregator-service</module>
+        <module>booking-service</module>
+
     </modules>
 
 </project>
