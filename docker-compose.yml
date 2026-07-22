@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: travel-mysql
+    environment:
+      MYSQL_DATABASE: travel_booking_db
+      MYSQL_ROOT_PASSWORD: root123
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+
+  booking-service:
+    image: booking-service
+    container_name: booking-service
+    depends_on:
+      - mysql
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/travel_booking_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root123
+
+
+volumes:
+  mysql-data:
